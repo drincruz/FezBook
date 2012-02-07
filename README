@@ -1,0 +1,10 @@
+FezBook PHP Library
+-------------------
+Created by Adrian J. Cruz
+
+Description: 
+This is just a library of functions that I found useful while doing FaceBook Graph API development.
+
+Revision history:
+v0.1    - Moved in my functions to the FezBook class
+v0.1.1  - Bug in the curl() wrapper.
