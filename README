@@ -2,9 +2,25 @@ FezBook PHP Library
 -------------------
 Created by Adrian J. Cruz
 
-Description: 
+DESCRIPTION 
 This is just a library of functions that I found useful while doing FaceBook Graph API development.
+http://drincruz.blogspot.com/p/fezbook.html
 
-Revision history:
+REVISION HISTORY
 v0.1    - Moved in my functions to the FezBook class
 v0.1.1  - Bug in the curl() wrapper.
+
+
+EXAMPLE
+$t = /* your access_token */;
+$fbid = /* facebook id to post to */;
+$postdata = "access_token=".$t;
+$postdata .= "&link=".$link;
+$postdata .= "&name=".urlencode(strip_tags($post_title));
+$postdata .= "&caption=".urlencode();
+$postdata .= "&description=".urlencode($desc);
+$fb = new FezBook();
+$fbpost = $fb->post_to_feed($t,$postdata,$fbid);
+
+NOTES
+If no Facebook ID is passed into any of the functions, it will default to "me" (https://graph.facebook.com/me)
