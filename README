@@ -9,7 +9,6 @@ http://drincruz.blogspot.com/p/fezbook.html
 REVISION HISTORY
 v0.1    - Moved in my functions to the FezBook class
 v0.1.1  - Bug in the curl() wrapper.
-v0.1.2  - Adding a FezBook.java version
 
 
 PHP EXAMPLE
@@ -22,13 +21,6 @@ $postdata .= "&caption=".urlencode();
 $postdata .= "&description=".urlencode($desc);
 $fb = new FezBook();
 $fbpost = $fb->post_to_feed($t,$postdata,$fbid);
-
-JAVA EXAMPLE
-import FezBook.*;
-/* Create an instance */
-FezBook fb = new FezBook(access_token);
-/* Post to Facebook */
-String fbreturn = fb.post_to_feed(postdata,fbid);
 
 NOTES
 If no Facebook ID is passed into any of the functions, it will default to "me" (https://graph.facebook.com/me)
